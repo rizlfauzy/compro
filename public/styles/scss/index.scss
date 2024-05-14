@@ -1,0 +1,18 @@
+// variable
+$primary-color: #FFF9D0;
+$secondary-color: #CAF4FF;
+$tertiary-color: #A0DEFF;
+$primary-text-color: #333;
+$secondary-text-color: #5AB2FF;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $primary-color;
+  color: $primary-text-color;
+}
