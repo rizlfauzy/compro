@@ -1,15 +1,10 @@
-// import { useState } from 'react'
-// import viteLogo from '/vite.svg'
-// import '/styles/css/index.css'
+import Game from "./component/Game";
 
-function App() {
-  // const [count, setCount] = useState(0)
 
+export default function App() {
   return (
     <>
-      <h1>Hello World</h1>
+     <Game />
     </>
   )
 }
-
-export default App

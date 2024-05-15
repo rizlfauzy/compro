@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // variable
 $primary-color: #FFF9D0;
 $secondary-color: #CAF4FF;
@@ -13,6 +17,12 @@ $secondary-text-color: #5AB2FF;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: $primary-color;
   color: $primary-text-color;
+}
+
+.square {
+  width: 35px;
+  height: 35px;
+  border: 1px solid $primary-text-color;
+  
 }
