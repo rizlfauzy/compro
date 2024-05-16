@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 // variable
-$primary-color: #FFF9D0;
-$secondary-color: #CAF4FF;
-$tertiary-color: #A0DEFF;
+$primary-color: #fff9d0;
+$secondary-color: #caf4ff;
+$tertiary-color: #a0deff;
 $primary-text-color: #333;
-$secondary-text-color: #5AB2FF;
+$secondary-text-color: #5ab2ff;
 
 * {
   margin: 0;
@@ -16,13 +16,44 @@ $secondary-text-color: #5AB2FF;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: $primary-text-color;
 }
 
-.square {
-  width: 35px;
-  height: 35px;
-  border: 1px solid $primary-text-color;
-  
+@layer components {
+  .square {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    font-weight: bold;
+    background-color: $secondary-color;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: $secondary-text-color;
+    &:nth-of-type(1),
+    &:nth-of-type(4),
+    &:nth-of-type(7) {
+      @apply border-r-0;
+    }
+    &:nth-of-type(3), &:nth-of-type(6), &:nth-of-type(9) {
+      @apply border-l-0;
+    }
+    &:nth-of-type(1) {
+      @apply rounded-tl-md;
+    }
+    &:nth-of-type(3) {
+      @apply rounded-tr-md;
+    }
+    &:nth-of-type(4),
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      @apply border-t-0 border-b-0;
+    }
+    &:nth-of-type(7) {
+      @apply rounded-bl-md;
+    }
+    &:nth-of-type(9) {
+      @apply rounded-br-md;
+    }
+  }
 }
