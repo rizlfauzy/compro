@@ -35,7 +35,9 @@ body {
     &:nth-of-type(7) {
       @apply border-r-0;
     }
-    &:nth-of-type(3), &:nth-of-type(6), &:nth-of-type(9) {
+    &:nth-of-type(3),
+    &:nth-of-type(6),
+    &:nth-of-type(9) {
       @apply border-l-0;
     }
     &:nth-of-type(1) {
@@ -55,5 +57,9 @@ body {
     &:nth-of-type(9) {
       @apply rounded-br-md;
     }
+  }
+
+  button.btn_history.active {
+    @apply bg-secondary_text text-white;
   }
 }

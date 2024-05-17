@@ -38,6 +38,8 @@ export default function Game() {
 
   const handle_click = useCallback(
     (i) => {
+      const btn_history = document.querySelectorAll(".btn_history");
+      btn_history.forEach((btn) => btn.classList.remove("active"));
       const squares_copy = [...squares];
       if (calculate_winner(squares) || squares_copy[i]) return;
       squares_copy[i] = xIsNext ? "X" : "O";
@@ -74,13 +76,16 @@ export default function Game() {
                       return (
                         <li key={move}>
                           <button
-                            className="transition bg-secondary_bg hover:bg-secondary_text hover:text-white rounded-md p-1 mt-1 w-full"
-                            onClick={() => {
+                            className="btn_history transition bg-secondary_bg hover:bg-secondary_text hover:text-white rounded-md p-1 mt-1 w-full"
+                            onClick={(e) => {
                               setStepNumber(move);
                               setSquares(history[move]);
                               setXIsNext(move % 2 === 0);
                               setStatus(`Next player: ${move % 2 === 0 ? "X" : "O"}`);
                               if (move === 0) setHistory([Array(9).fill(null)]);
+                              const btn_history = document.querySelectorAll(".btn_history");
+                              btn_history.forEach((btn) => btn.classList.remove("active"));
+                              e.target.classList.add("active");
                             }}
                           >
                             {move ? `Go to move #${move}` : "Go to game start"}

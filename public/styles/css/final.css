@@ -594,6 +594,13 @@ video {
   border-bottom-right-radius: 0.375rem;
 }
 
+button.btn_history.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(90 178 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .visible {
   visibility: visible;
 }
@@ -610,12 +617,12 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .block {
@@ -638,28 +645,8 @@ video {
   display: none;
 }
 
-.max-h-40 {
-  max-height: 10rem;
-}
-
-.max-h-\[\] {
-  max-height: ;
-}
-
 .max-h-\[150px\] {
   max-height: 150px;
-}
-
-.min-h-4 {
-  min-height: 1rem;
-}
-
-.min-h-44 {
-  min-height: 11rem;
-}
-
-.min-h-48 {
-  min-height: 12rem;
 }
 
 .w-\[150px\] {
@@ -690,20 +677,12 @@ video {
   resize: both;
 }
 
-.flex-col {
-  flex-direction: column;
-}
-
 .flex-wrap {
   flex-wrap: wrap;
 }
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-center {
@@ -754,18 +733,9 @@ video {
   border-top-width: 0px;
 }
 
-.border-r {
-  border-right-width: 1px;
-}
-
 .border-secondary_bg {
   --tw-border-opacity: 1;
   border-color: rgb(202 244 255 / var(--tw-border-opacity));
-}
-
-.border-secondary_text {
-  --tw-border-opacity: 1;
-  border-color: rgb(90 178 255 / var(--tw-border-opacity));
 }
 
 .bg-primary_bg {
@@ -778,12 +748,17 @@ video {
   background-color: rgb(202 244 255 / var(--tw-bg-opacity));
 }
 
-.p-3 {
-  padding: 0.75rem;
+.bg-secondary_text {
+  --tw-bg-opacity: 1;
+  background-color: rgb(90 178 255 / var(--tw-bg-opacity));
 }
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .pb-8 {
@@ -792,10 +767,6 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pt-0 {
-  padding-top: 0px;
 }
 
 .align-middle {
@@ -807,13 +778,13 @@ video {
   line-height: 2rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
+.text-lg {
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
